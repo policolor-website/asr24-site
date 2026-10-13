@@ -6,7 +6,7 @@ import {
   useMotionValue,
   useReducedMotion,
 } from "motion/react";
-import type { ComponentType, MouseEvent, ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -18,8 +18,7 @@ import {
   Truck,
   Wrench,
 } from "@phosphor-icons/react";
-
-type IconType = ComponentType<{ size?: number | string; weight?: string; className?: string }>;
+import type { Icon } from "@phosphor-icons/react";
 
 function Spotlight({ children, className = "" }: { children: ReactNode; className?: string }) {
   const mx = useMotionValue(-300);
@@ -58,7 +57,7 @@ function ServiceCard({
   href,
   delay,
 }: {
-  icon: IconType;
+  icon: Icon;
   title: string;
   text: string;
   href: string;
