@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PhoneCall, EnvelopeSimple, MapPin } from "@phosphor-icons/react/ssr";
+import { PhoneCall, WhatsappLogo, EnvelopeSimple, MapPin } from "@phosphor-icons/react/ssr";
 import { Reveal } from "./Reveal";
 
 export function Footer() {
@@ -27,6 +27,15 @@ export function Footer() {
               >
                 <PhoneCall size={26} weight="fill" />
                 0767 39 39 39
+              </a>
+              <a
+                href="https://wa.me/40767393939"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2.5 rounded-lg border border-white/20 px-7 py-4 font-mono text-sm tracking-wide text-paper transition-colors hover:border-hazard hover:text-hazard"
+              >
+                <WhatsappLogo size={20} weight="fill" />
+                WhatsApp
               </a>
             </div>
           </Reveal>
@@ -59,6 +68,12 @@ export function Footer() {
               <li className="flex items-center gap-2.5">
                 <PhoneCall size={15} className="text-hazard" />
                 <a href="tel:+40767393939" className="hover:text-paper">0767 39 39 39</a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <WhatsappLogo size={15} className="text-hazard" />
+                <a href="https://wa.me/40767393939" target="_blank" rel="noreferrer" className="hover:text-paper">
+                  0767 39 39 39
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <EnvelopeSimple size={15} className="text-hazard" />
