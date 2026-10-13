@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Anton, Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
@@ -37,6 +38,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${anton.variable} ${archivo.variable} ${jetbrains.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ink font-sans text-paper grain">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18510380216"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18510380216');
+          `}
+        </Script>
         <Nav />
         {children}
         <Footer />
